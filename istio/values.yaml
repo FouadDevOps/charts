@@ -1,0 +1,14 @@
+istiod:
+  enabled: false
+  global:
+    caAddress: cert-manager-istio-csr.cert-manager.svc:443
+    proxy:
+        image: quay-registry.aetna.com/opensource/istio/proxyv2:1.20.2
+    proxy_init:
+        image: quay-registry.aetna.com/opensource/istio/proxyv2:1.20.2
+  pilot:
+    image: quay-registry.aetna.com/opensource/istio/pilot:1.20.2
+    env:
+      ENABLE_CA_SERVER: false
+certManagerForISTIO:
+  enabled: false
