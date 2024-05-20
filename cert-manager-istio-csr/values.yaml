@@ -1,0 +1,24 @@
+cert-manager-istio-csr:
+  image:
+    repository: quay-registry.aetna.com/opensource/jetstack/cert-manager-istio-csr
+    tag: v0.8.0
+  app:
+    certmanager:
+      additionalAnnotations:
+        - name: argocd.argoproj.io/sync-wave
+          value: "'-1'"
+
+  # For future enablement of static Root CA:
+  # app:
+  #   tls:
+  #     rootCAFile: /var/run/secrets/istio-csr/ca.pem
+  # volumeMounts:
+  #   - name: root-ca
+  #     mountPath: /var/run/secrets/istio-csr
+  # volumes:
+  #   - name: root-ca
+  #     secret:
+  #       secretName: istio-root-ca
+
+certManagerForISTIO:
+  enabled: false
