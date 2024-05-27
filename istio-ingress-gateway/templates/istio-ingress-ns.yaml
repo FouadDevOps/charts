@@ -1,6 +1,4 @@
-{{- if .Values.istioIngressGateway.enabled -}}
 apiVersion: v1
 kind: Namespace
 metadata:
   name: istio-ingress
-{{- end }}
