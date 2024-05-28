@@ -1,6 +1,0 @@
-dependencies:
-- name: cert-manager-istio-csr
-  repository: https://charts.jetstack.io
-  version: v0.8.0
-digest: sha256:4022b38ad44d26dcbca32eb4dd52651640af1d99af788b40d16151df171325fe
-generated: "2024-04-02T08:10:04.390194-04:00"
